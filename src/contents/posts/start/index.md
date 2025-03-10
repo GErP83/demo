@@ -74,4 +74,4 @@ I'm sure you know, how much it means to an online service provider to more ratin
 
 ---
 
-**[Next: Change Images]({{site.baseUrl}}/posts/change-images/)**
+**[Next: Change Images](/posts/change-images/)**
