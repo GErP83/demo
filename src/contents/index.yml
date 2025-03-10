@@ -1,5 +1,5 @@
-#baseUrl: "https://gerp83.github.io/demo/"
-baseUrl: "http://127.0.0.1:3000/"
+baseUrl: "https://gerp83.github.io/demo/"
+#baseUrl: "http://127.0.0.1:3000/"
 language: "en-US"
 title: "My site"
 description: "Description for my site"
