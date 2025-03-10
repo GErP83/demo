@@ -78,7 +78,7 @@
             event.preventDefault(); // Prevent default form submission
             const searchText = document.getElementById('searchValue').value;
             if (searchText) {
-                window.location.href = `/search?q=${encodeURIComponent(searchText)}`;
+                window.location.href = `{{site.baseUrl}}/search?q=${encodeURIComponent(searchText)}`;
             }
         });
     </script>
