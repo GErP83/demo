@@ -1,48 +1,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://gerp83.github.io/demo</loc>
+        <loc>http://127.0.0.1:3000</loc>
         <lastmod>2025-03-03</lastmod>
-        <loc>https://gerp83.github.io/demo/about/</loc>
+        <loc>http://127.0.0.1:3000/about/</loc>
         <lastmod>2025-03-03</lastmod>
-        <loc>https://gerp83.github.io/demo/authors/</loc>
+        <loc>http://127.0.0.1:3000/authors/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/authors/toucansites/</loc>
+        <loc>http://127.0.0.1:3000/authors/toucansites/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/search/</loc>
+        <loc>http://127.0.0.1:3000/search/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/tags/</loc>
+        <loc>http://127.0.0.1:3000/tags/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/tags/content/</loc>
+        <loc>http://127.0.0.1:3000/tags/content/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/tags/deployment/</loc>
+        <loc>http://127.0.0.1:3000/tags/deployment/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/tags/markdown/</loc>
+        <loc>http://127.0.0.1:3000/tags/markdown/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/start/</loc>
+        <loc>http://127.0.0.1:3000/posts/start/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/change-images/</loc>
+        <loc>http://127.0.0.1:3000/posts/change-images/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/new-tag/</loc>
+        <loc>http://127.0.0.1:3000/posts/new-tag/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/new-author/</loc>
+        <loc>http://127.0.0.1:3000/posts/new-author/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/new-post/</loc>
+        <loc>http://127.0.0.1:3000/posts/new-post/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/new-navigation/</loc>
+        <loc>http://127.0.0.1:3000/posts/new-navigation/</loc>
         <lastmod>2025-03-03</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/page-content/</loc>
+        <loc>http://127.0.0.1:3000/posts/page-content/</loc>
         <lastmod>2025-03-03</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/change-footer/</loc>
+        <loc>http://127.0.0.1:3000/posts/change-footer/</loc>
         <lastmod>2025-03-03</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/markdown-basic/</loc>
+        <loc>http://127.0.0.1:3000/posts/markdown-basic/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/markdown-basic2/</loc>
+        <loc>http://127.0.0.1:3000/posts/markdown-basic2/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/theme-tweaks/</loc>
+        <loc>http://127.0.0.1:3000/posts/theme-tweaks/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/github-deploy/</loc>
+        <loc>http://127.0.0.1:3000/posts/github-deploy/</loc>
         <lastmod>2025-02-28</lastmod>
-        <loc>https://gerp83.github.io/demo/posts/trouble-shooting/</loc>
+        <loc>http://127.0.0.1:3000/posts/trouble-shooting/</loc>
         <lastmod>2025-03-03</lastmod>
     </url>
 </urlset>
