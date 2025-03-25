@@ -4,102 +4,102 @@
     <description>Description for my site</description>
     <link>https://gerp83.github.io/demo</link>
     <language>en-US</language>
-    <lastBuildDate>Mon, 10 Mar 2025 11:05:08 +0000</lastBuildDate>
-    <pubDate>Mon, 20 Jan 2025 01:36:39 +0000</pubDate>
+    <lastBuildDate>Tue, 25 Mar 2025 08:08:37 +0000</lastBuildDate>
+    <pubDate>Tue, 25 Mar 2025 08:08:37 +0000</pubDate>
     <ttl>250</ttl>
-    <atom:link href="https://gerp83.github.io/demorss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://gerp83.github.io/demo/rss.xml" rel="self" type="application/rss+xml"/>
 
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/start/</guid>
-    <title><![CDATA[ START ]]></title>
-    <description><![CDATA[ This guide will walk you through essential tasks such as changing the site logo, adding new content (tags, authors, posts), and customizing your site’s pages and footer ]]></description>
-    <link>https://gerp83.github.io/demo/posts/start/</link>
-    <pubDate>Mon, 20 Jan 2025 01:36:39 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/change-images/</guid>
-    <title><![CDATA[ Change Images ]]></title>
-    <description><![CDATA[ Learn how to change images, including the site logo, cover images, post images, and author images in Try-O-Theme. ]]></description>
-    <link>https://gerp83.github.io/demo/posts/change-images/</link>
-    <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/new-tag/</guid>
-    <title><![CDATA[ Add New Tag ]]></title>
-    <description><![CDATA[ This guide will walk you through how to add a new tag ]]></description>
-    <link>https://gerp83.github.io/demo/posts/new-tag/</link>
-    <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/new-author/</guid>
-    <title><![CDATA[ Add New Author ]]></title>
-    <description><![CDATA[ This guide will walk you through how to add a new author ]]></description>
-    <link>https://gerp83.github.io/demo/posts/new-author/</link>
-    <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/new-post/</guid>
-    <title><![CDATA[ Add New Post ]]></title>
-    <description><![CDATA[ This guide will walk you through how to add a new post. ]]></description>
-    <link>https://gerp83.github.io/demo/posts/new-post/</link>
-    <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/new-navigation/</guid>
-    <title><![CDATA[ Create a custom page in navigation ]]></title>
-    <description><![CDATA[ This guide will walk you through how to create a custom page and add it to the navigation menu ]]></description>
-    <link>https://gerp83.github.io/demo/posts/new-navigation/</link>
-    <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/page-content/</guid>
-    <title><![CDATA[ Adding Extra Content ]]></title>
-    <description><![CDATA[ Learn how to add custom content to different pages in Try-O-Theme using Markdown and frontmatter in index.md files. ]]></description>
-    <link>https://gerp83.github.io/demo/posts/page-content/</link>
-    <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/change-footer/</guid>
-    <title><![CDATA[ Customize the footer ]]></title>
-    <description><![CDATA[ This guide will walk you through how to customize the footer ]]></description>
-    <link>https://gerp83.github.io/demo/posts/change-footer/</link>
-    <pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/markdown-basic/</guid>
-    <title><![CDATA[ Markdown Basics - Text Formatting ]]></title>
-    <description><![CDATA[ This guide will walk you through the basics of Markdown text formatting ]]></description>
-    <link>https://gerp83.github.io/demo/posts/markdown-basic/</link>
-    <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/markdown-basic2/</guid>
-    <title><![CDATA[ Markdown Basics - List, Links and Images ]]></title>
-    <description><![CDATA[ This guide will walk you through how to use lists, links and images in Markdown ]]></description>
-    <link>https://gerp83.github.io/demo/posts/markdown-basic2/</link>
-    <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/theme-tweaks/</guid>
-    <title><![CDATA[ Theme Tweaks ]]></title>
-    <description><![CDATA[ Learn how to customize your Try-O-Theme by changing styles and using block directives. ]]></description>
-    <link>https://gerp83.github.io/demo/posts/theme-tweaks/</link>
-    <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/github-deploy/</guid>
-    <title><![CDATA[ GitHub Deploy ]]></title>
-    <description><![CDATA[ Toucan-based websites can be hosted for free using GitHub Pages. Follow these steps to set up your site ]]></description>
-    <link>https://gerp83.github.io/demo/posts/github-deploy/</link>
-    <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
-</item>
-<item>
-    <guid isPermaLink="true">https://gerp83.github.io/demo/posts/trouble-shooting/</guid>
-    <title><![CDATA[ Troubleshooting ]]></title>
-    <description><![CDATA[ Solutions to common issues with Try-O-Theme and Toucan static site generator. ]]></description>
-    <link>https://gerp83.github.io/demo/posts/trouble-shooting/</link>
-    <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
-</item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/change-footer/</guid>
+            <title><![CDATA[ Customize the footer ]]></title>
+            <description><![CDATA[ This guide will walk you through how to customize the footer ]]></description>
+            <link>https://gerp83.github.io/demo/change-footer/</link>
+            <pubDate>Mon, 13 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/change-images/</guid>
+            <title><![CDATA[ Change Images ]]></title>
+            <description><![CDATA[ Learn how to change images, including the site logo, cover images, post images, and author images in Try-O-Theme. ]]></description>
+            <link>https://gerp83.github.io/demo/change-images/</link>
+            <pubDate>Sun, 19 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/github-deploy/</guid>
+            <title><![CDATA[ GitHub Deploy ]]></title>
+            <description><![CDATA[ Toucan-based websites can be hosted for free using GitHub Pages. Follow these steps to set up your site ]]></description>
+            <link>https://gerp83.github.io/demo/github-deploy/</link>
+            <pubDate>Thu, 09 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/markdown-basic/</guid>
+            <title><![CDATA[ Markdown Basics - Text Formatting ]]></title>
+            <description><![CDATA[ This guide will walk you through the basics of Markdown text formatting ]]></description>
+            <link>https://gerp83.github.io/demo/markdown-basic/</link>
+            <pubDate>Sun, 12 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/markdown-basic2/</guid>
+            <title><![CDATA[ Markdown Basics - List, Links and Images ]]></title>
+            <description><![CDATA[ This guide will walk you through how to use lists, links and images in Markdown ]]></description>
+            <link>https://gerp83.github.io/demo/markdown-basic2/</link>
+            <pubDate>Sat, 11 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/new-author/</guid>
+            <title><![CDATA[ Add New Author ]]></title>
+            <description><![CDATA[ This guide will walk you through how to add a new author ]]></description>
+            <link>https://gerp83.github.io/demo/new-author/</link>
+            <pubDate>Fri, 17 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/new-navigation/</guid>
+            <title><![CDATA[ Create a custom page in navigation ]]></title>
+            <description><![CDATA[ This guide will walk you through how to create a custom page and add it to the navigation menu ]]></description>
+            <link>https://gerp83.github.io/demo/new-navigation/</link>
+            <pubDate>Wed, 15 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/new-post/</guid>
+            <title><![CDATA[ Add New Post ]]></title>
+            <description><![CDATA[ This guide will walk you through how to add a new post. ]]></description>
+            <link>https://gerp83.github.io/demo/new-post/</link>
+            <pubDate>Thu, 16 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/new-tag/</guid>
+            <title><![CDATA[ Add New Tag ]]></title>
+            <description><![CDATA[ This guide will walk you through how to add a new tag ]]></description>
+            <link>https://gerp83.github.io/demo/new-tag/</link>
+            <pubDate>Sat, 18 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/page-content/</guid>
+            <title><![CDATA[ Adding Extra Content ]]></title>
+            <description><![CDATA[ Learn how to add custom content to different pages in Try-O-Theme using Markdown and frontmatter in index.md files. ]]></description>
+            <link>https://gerp83.github.io/demo/page-content/</link>
+            <pubDate>Tue, 14 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/start/</guid>
+            <title><![CDATA[ START ]]></title>
+            <description><![CDATA[ This guide will walk you through essential tasks such as changing the site logo, adding new content (tags, authors, posts), and customizing your site’s pages and footer ]]></description>
+            <link>https://gerp83.github.io/demo/start/</link>
+            <pubDate>Mon, 20 Jan 2025 00:36:39 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/theme-tweaks/</guid>
+            <title><![CDATA[ Theme Tweaks ]]></title>
+            <description><![CDATA[ Learn how to customize your Try-O-Theme by changing styles and using block directives. ]]></description>
+            <link>https://gerp83.github.io/demo/theme-tweaks/</link>
+            <pubDate>Fri, 10 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
+        <item>
+            <guid isPermaLink="true">https://gerp83.github.io/demo/trouble-shooting/</guid>
+            <title><![CDATA[ Troubleshooting ]]></title>
+            <description><![CDATA[ Solutions to common issues with Try-O-Theme and Toucan static site generator. ]]></description>
+            <link>https://gerp83.github.io/demo/trouble-shooting/</link>
+            <pubDate>Wed, 08 Jan 2025 00:02:03 +0000</pubDate>
+        </item>
 
 </channel>
 </rss>
