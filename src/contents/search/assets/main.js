@@ -86,6 +86,9 @@ async function postFormDataAsJson() {
 
     // get baseUrl value
     let baseUrlValue = document.getElementById("baseUrlValue").textContent;
+
+    console.log("baseUrlValue")
+    console.log(baseUrlValue)
     const response = await fetch(baseUrlValue + "/api/posts.json", fetchOptions);
 
     if (!response.ok) {
