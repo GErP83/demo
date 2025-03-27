@@ -248,7 +248,7 @@ img.large {
 
 .article-class {
     margin: 16px;
-    display: grid;
+    display: block;
     grid-column-gap: 32px;
     grid-template-columns: 1fr;
 }
