@@ -27,7 +27,7 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/app \
             -w /app \
-            toucansites/toucan generate ./src ./docs
+            toucansites/toucan sh -c "toucan generate ./src ./docs"
           echo "--- Output directory ---"
           ls -alh ${{ github.workspace }}/docs
 
