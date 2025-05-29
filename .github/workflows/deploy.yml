@@ -16,11 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check repo structure
-        run: |
-          echo "--- Project structure ---"
-          find ${{ github.workspace }}
-
       - name: Build site using Toucan
         run: |
           docker run --rm \
@@ -31,6 +26,11 @@ jobs:
 
           echo "--- Output directory contents ---"
           ls -alh ${{ github.workspace }}/docs
+      
+      - name: Upload static site to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
 
   deploy:
     needs: build
