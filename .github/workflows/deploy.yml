@@ -1,4 +1,4 @@
-name: Build and Deploy Toucan Site
+name: Build and Deploy with Toucan
 
 on:
   push:
