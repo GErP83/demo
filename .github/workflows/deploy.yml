@@ -33,7 +33,7 @@ jobs:
           path: ./docs
 
   deploy-page:
-    needs: build
+    needs: build-page
     runs-on: ubuntu-latest
     environment:
       name: github-pages
