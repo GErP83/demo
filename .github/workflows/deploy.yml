@@ -27,14 +27,9 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/app \
             -w /app \
-            toucansites/toucan sh -c "toucan generate ./src ./docs"
-          echo "--- Output directory ---"
+            --entrypoint toucan \
+            toucansites/toucan generate ./src ./docs
           ls -alh ${{ github.workspace }}/docs
-
-      - name: Upload static files
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./doc  # Toucan output directory
 
   deploy:
     needs: build
