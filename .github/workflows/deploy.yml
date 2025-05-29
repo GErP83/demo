@@ -23,13 +23,15 @@ jobs:
 
       - name: Build with Toucan Docker image
         run: |
-          mkdir -p ${{ github.workspace }}/docs
+          
+          mkdir -p ${{ github.workspace }}/doc
           docker run --rm \
-            -v ${{ github.workspace }}:/app \
-            -w /app \
+            -v ${{ github.workspace }}:/src \
+            -v ${{ github.workspace }}/doc:/doc \
+            -w /src/src \
             toucansites/toucan generate ./src ./docs
-          echo "--- Output directory ---"
-          ls -alh ${{ github.workspace }}/docs
+          echo "--- Output directory contents ---"
+          ls -alh ${{ github.workspace }}/doc
 
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
