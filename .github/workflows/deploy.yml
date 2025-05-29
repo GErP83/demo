@@ -26,6 +26,7 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/site \
             -w /site \
+            --user $(id -u):$(id -g) \
             toucansites/toucan generate ./src ./docs
 
           echo "--- Output directory contents ---"
