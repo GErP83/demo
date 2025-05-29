@@ -28,7 +28,7 @@ jobs:
             -v ${{ github.workspace }}:/src \
             -v ${{ github.workspace }}/doc:/doc \
             -w /src/src \
-            toucansites/toucan generate
+            toucansites/toucan generate --output /doc
           echo "--- Output directory contents ---"
           ls -alh ${{ github.workspace }}/doc
 
