@@ -14,7 +14,7 @@ jobs:
 
       - name: Build Site with Docker (Toucan)
         run: |
-          docker run --rm -v ${{ github.workspace }}:/src toucansites/toucan toucan generate
+          docker run --rm -v ${{ github.workspace }}:/src toucansites/toucan generate
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
