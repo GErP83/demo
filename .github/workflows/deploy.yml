@@ -18,7 +18,7 @@ jobs:
 
       - name: Build with Toucan Docker image
         run: |
-          docker run --rm -v ${{ github.workspace }}:/src toucansites/toucan toucan generate
+          docker run --rm -v ${{ github.workspace }}:/src toucansites/toucan generate
 
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
