@@ -23,9 +23,6 @@ jobs:
             -w /site \
             --user $(id -u):$(id -g) \
             toucansites/toucan generate ./src ./docs
-
-          echo "--- Output directory contents ---"
-          ls -alh ${{ github.workspace }}/docs
       
       - name: Upload static site to GitHub Pages
         uses: actions/upload-pages-artifact@v3
