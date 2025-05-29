@@ -24,11 +24,13 @@ jobs:
       - name: Build site using Toucan
         run: |
           mkdir -p ${{ github.workspace }}/docs
+          sudo chown -R 1000:1000 ${{ github.workspace }}/docs
           docker run --rm \
             -v ${{ github.workspace }}:/site \
             -v ${{ github.workspace }}/docs:/site/docs \
             -w /site \
             toucansites/toucan generate ./src ./docs
+          echo "--- Output directory contents ---"
           ls -alh ${{ github.workspace }}/docs
 
   deploy:
