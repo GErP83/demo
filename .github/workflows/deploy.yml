@@ -21,13 +21,13 @@ jobs:
           echo "--- Project structure ---"
           find ${{ github.workspace }}
 
-      - name: Build with Toucan Docker image
+      - name: Build site using Toucan
         run: |
           mkdir -p ${{ github.workspace }}/docs
           docker run --rm \
-            -v ${{ github.workspace }}:/app \
-            -w /app \
-            --entrypoint toucan \
+            -v ${{ github.workspace }}:/site \
+            -v ${{ github.workspace }}/docs:/site/docs \
+            -w /site \
             toucansites/toucan generate ./src ./docs
           ls -alh ${{ github.workspace }}/docs
 
