@@ -18,8 +18,12 @@ jobs:
 
       - name: Build with Toucan Docker image
         run: |
-          docker run --rm -v ${{ github.workspace }}:/src toucansites/toucan generate
-          echo "--- Contents of output directory ---"
+          mkdir -p ${{ github.workspace }}/doc
+          docker run --rm \
+            -v ${{ github.workspace }}:/src \
+            -v ${{ github.workspace }}/doc:/doc \
+            toucansites/toucan generate
+          echo "--- Output directory contents ---"
           ls -alh ${{ github.workspace }}/doc
 
       - name: Upload static files
