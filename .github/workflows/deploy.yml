@@ -27,6 +27,7 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}:/src \
             -v ${{ github.workspace }}/doc:/doc \
+            -w /src/src \
             toucansites/toucan generate
           echo "--- Output directory contents ---"
           ls -alh ${{ github.workspace }}/doc
