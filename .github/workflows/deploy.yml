@@ -16,6 +16,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Check repo structure
+        run: |
+          echo "--- Project structure ---"
+          find ${{ github.workspace }}
+
       - name: Build with Toucan Docker image
         run: |
           mkdir -p ${{ github.workspace }}/doc
