@@ -27,10 +27,12 @@ jobs:
       - name: Download Toucan .deb
         run: |
           TAG=${{ steps.get_latest_tag.outputs.tag }}
-          FILE="toucan-linux-amd64-${TAG//v/}.deb"
-          curl -L -o toucan.deb https://github.com/toucansites/toucan/releases/download/$TAG/$FILE
+          FILE="toucan-linux-amd64-${TAG//-/.}.deb"
+          URL="https://github.com/toucansites/toucan/releases/download/$TAG/$FILE"
+          echo "Downloading: $URL"
+          curl -L -o toucan.deb "$URL"
 
-      - name: Install Toucan from .deb
+      - name: Install Toucan
         run: |
           sudo dpkg -i toucan.deb || true
           if ! command -v toucan &> /dev/null; then
