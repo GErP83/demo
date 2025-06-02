@@ -13,7 +13,7 @@ jobs:
   build-page:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Get latest tag of Toucan
