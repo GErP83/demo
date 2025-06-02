@@ -16,7 +16,7 @@ jobs:
       - name: Checkout your repository
         uses: actions/checkout@v4
 
-      - name: Get latest pre-release tag of Toucan
+      - name: Get latest tag of Toucan
         id: get_latest_tag
         run: |
           tag=$(curl -s https://api.github.com/repos/toucansites/toucan/releases \
