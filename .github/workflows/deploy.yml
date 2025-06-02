@@ -20,7 +20,7 @@ jobs:
         id: get_latest_tag
         run: |
           tag=$(curl -s https://api.github.com/repos/toucansites/toucan/releases \
-            | jq -r '.[0].tag_name')
+            | jq -r 'sort_by(.created_at) | reverse | .[0].tag_name')
           echo "Latest tag: $tag"
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
 
