@@ -20,8 +20,8 @@ jobs:
         id: get_latest_tag
         run: |
           tag=$(curl -s https://api.github.com/repos/toucansites/toucan/releases \
-            | jq -r '[.[] | select(.prerelease == true)][0].tag_name')
-          echo "Latest pre-release tag: $tag"
+            | jq -r '.[0].tag_name')
+          echo "Latest tag: $tag"
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
 
       - name: Download Toucan .deb
