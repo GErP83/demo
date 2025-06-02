@@ -13,16 +13,38 @@ jobs:
   build-page:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout your repository
         uses: actions/checkout@v4
 
-      - name: Build site using Toucan
+      - name: Get latest pre-release tag of Toucan
+        id: get_latest_tag
         run: |
-          docker run --rm \
-            -v ${{ github.workspace }}:/site \
-            -w /site \
-            --user $(id -u):$(id -g) \
-            toucansites/toucan generate ./src ./docs
+          tag=$(curl -s https://api.github.com/repos/toucansites/toucan/releases \
+            | jq -r '[.[] | select(.prerelease == true)][0].tag_name')
+          echo "Latest pre-release tag: $tag"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+      - name: Download Toucan .deb
+        run: |
+          TAG=${{ steps.get_latest_tag.outputs.tag }}
+          FILE="toucan-linux-amd64-${TAG//v/}.deb"
+          curl -L -o toucan.deb https://github.com/toucansites/toucan/releases/download/$TAG/$FILE
+
+      - name: Install Toucan from .deb
+        run: |
+          sudo dpkg -i toucan.deb || true
+          if ! command -v toucan &> /dev/null; then
+            mkdir -p extracted
+            dpkg-deb -x toucan.deb extracted
+            sudo cp extracted/usr/bin/toucan* /usr/local/bin/
+            sudo chmod +x /usr/local/bin/toucan*
+          fi
+
+      - name: Confirm Toucan is available
+        run: toucan --version
+
+      - name: Generate site
+        run: toucan generate ./src ./docs
       
       - name: Upload static site to GitHub Pages
         uses: actions/upload-pages-artifact@v3
