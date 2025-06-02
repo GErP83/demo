@@ -48,7 +48,7 @@ jobs:
       - name: Generate site
         run: toucan generate ./src ./docs
       
-      - name: Upload static site to GitHub Pages
+      - name: Upload site source to page artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
