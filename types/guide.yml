@@ -1,0 +1,42 @@
+id: guide
+paths:
+  - docs/guide
+
+properties:
+  title:
+    type: string
+    required: true
+  order:
+    type: int
+    required: true
+
+relations:
+  category:
+    references: category
+    type: one
+    order:
+      key: title
+      direction: asc
+
+queries:
+    prev:
+        contentType: guide
+        limit: 1
+        filter:
+            key: order
+            operator: lessThan
+            value: "{{order}}"
+        orderBy: 
+            - key: order
+              direction: desc
+
+    next:
+        contentType: guide
+        limit: 1
+        filter:
+            key: order
+            operator: greaterThan
+            value: "{{order}}"
+        orderBy: 
+            - key: order
+              direction: asc

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="canonical" href="http://localhost:3000/deployment/adding-content-to-a-repository/">
+    <link rel="prev" href="http://localhost:3000/deployment/creating-a-repository/">
+    <link rel="next" href="http://localhost:3000/deployment/deploying-using-github-actions/">
+    
+    <title>Adding content to your repository - T-Doc</title>
+    <meta name="description" content="Toucan-based websites can be hosted for free using GitHub Pages. Follow these steps to set up your site">
+    
+    <meta property="og:url" content="http://localhost:3000/deployment/adding-content-to-a-repository/">
+    <meta property="og:title" content="Adding content to your repository - T-Doc">
+    <meta property="og:description" content="Toucan-based websites can be hosted for free using GitHub Pages. Follow these steps to set up your site">
+    <meta property="og:image" content="http://localhost:3000/images/defaults/default.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adding content to your repository - T-Doc">
+    <meta name="twitter:description" content="Toucan-based websites can be hosted for free using GitHub Pages. Follow these steps to set up your site">
+    <meta name="twitter:image" content="http://localhost:3000/images/defaults/default.jpg">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:3000/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:3000/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:3000/favicon-16x16.png">
+    <link rel="manifest" href="http://localhost:3000/site.webmanifest">
+
+    <link rel="stylesheet" href="http://localhost:3000/css/modern-normalize.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/modern-base.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/base.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/navigation.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/variables.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/grid.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/footer.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/margins.css">
+    <link rel="stylesheet" href="http://localhost:3000/css/blocks.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lato:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+   
+    
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+        media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+        media="(prefers-color-scheme: dark)"
+    >
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+    <div class='bg'></div>
+    <div class='content'>
+        <div id="navigation-container" class="wrapper">
+          <header id="navigation">
+        
+            <div class="topbar">
+              <a href="http://localhost:3000/" class="logo">
+                <img
+                  src="http://localhost:3000/images/logos/logo.png"
+                  alt="T-Doc header icon"
+                  title="T-Doc"
+                />
+                <span>T-Doc</span>
+              </a>
+        
+              <div class="search-btn" id="open-modal-btn-mobile">
+                <span class="search-btn-icon" style="--icon: url('http://localhost:3000/images/mobile_search.svg');"></span>
+              </div>
+        
+            </div>
+        
+            <div class="mobile-nav">
+              <button id="menu-toggle" aria-label="Menu">
+                <span class="menu-toggle-icon" style="--icon: url('http://localhost:3000/images/mobile_menu.svg');"></span>
+              </button>
+        
+        
+                <div class="nav-breadcrumbs">
+                    <a href="http://localhost:3000/deployment/">Deployment</a>
+                    <span class="breadcrumbs-arrow" style="--icon: url('http://localhost:3000/images/mobile_arrow.svg');"></span>
+                    <div class="active">Adding content to your repository</div>
+                </div>
+        
+            </div>
+        
+            <nav class="desktop-nav">
+              <div class="menu-items">
+                <div>
+                    <a href="http://localhost:3000/">
+                        Docs
+                    </a>
+                </div>
+        <div>
+                    <a href="http://localhost:3000/license/">
+                        License
+                    </a>
+                </div>
+        <div>
+                    <a href="https://github.com/toucansites/t-doc-template" target="_blank">
+                        <span class="navigation-icon" style="--icon: url('http://localhost:3000/images/github_icon.svg');"></span>
+                        Github
+                    </a>
+                </div>
+              </div>
+            </nav>
+        
+          </header>
+        
+          <div id="mobile-menu" class="mobile-menu">
+        
+            <div class="select-wrapper">
+        
+              <div class="select-container">
+                <div class="select-field">
+        
+                  <select aria-label="State" id="menu-select">
+                      <option value="http://localhost:3000/">Docs</option>
+                      
+              <option value="http://localhost:3000/license/">License</option>
+                      
+              
+                      <option value="https://github.com/toucansites/t-doc-template">Github</option>
+                  </select>
+        
+        
+        
+                  <span class="select-icon" style="--icon: url('http://localhost:3000/images/mobile-select-icon.svg');"></span>
+                </div>
+        
+                <button id="close-menu" aria-label="Close Menu">✕</button>
+              </div>
+        
+              <div class="menu-list">
+                  <details class="http://localhost:3000/getting-started/" open>
+                      <summary style="font-size: 1rem;"><a href="http://localhost:3000/getting-started/">Getting started</a></summary>
+                      <ul>
+                          <li><a href="http://localhost:3000/getting-started/01-prerequisites/">Prerequisites</a></li>
+                  <li><a href="http://localhost:3000/getting-started/02-overview/">Overview</a></li>
+                  <li><a href="http://localhost:3000/getting-started/03-how-to-use/">How to use</a></li>
+                  <li><a href="http://localhost:3000/getting-started/04-help-and-contribution/">Help and contribution</a></li>
+                      </ul>
+                  </details>
+          <details class="http://localhost:3000/markdown-basics/" open>
+                      <summary style="font-size: 1rem;"><a href="http://localhost:3000/markdown-basics/">Markdown basics</a></summary>
+                      <ul>
+                          <li><a href="http://localhost:3000/markdown-basics/text-formatting-and-lists/">Text formatting and lists</a></li>
+                  <li><a href="http://localhost:3000/markdown-basics/links-images-and-tables/">Links, images and tables</a></li>
+                      </ul>
+                  </details>
+          <details class="http://localhost:3000/template-basics/" open>
+                      <summary style="font-size: 1rem;"><a href="http://localhost:3000/template-basics/">Template basics</a></summary>
+                      <ul>
+                          <li><a href="http://localhost:3000/template-basics/changing-the-site-title/">Changing the site title</a></li>
+                  <li><a href="http://localhost:3000/template-basics/changing-the-site-logo/">Changing the site logo</a></li>
+                  <li><a href="http://localhost:3000/template-basics/changing-the-hero-cards/">Changing the hero cards</a></li>
+                  <li><a href="http://localhost:3000/template-basics/creating-a-new-category/">Creating a new category</a></li>
+                  <li><a href="http://localhost:3000/template-basics/creating-a-new-guide/">Creating a new guide</a></li>
+                  <li><a href="http://localhost:3000/template-basics/creating-a-custom-page/">Creating a custom page</a></li>
+                  <li><a href="http://localhost:3000/template-basics/customizing-the-footer/">Customizing the footer</a></li>
+                      </ul>
+                  </details>
+          <details class="http://localhost:3000/deployment/" open>
+                      <summary style="font-size: 1rem;"><a href="http://localhost:3000/deployment/">Deployment</a></summary>
+                      <ul>
+                          <li><a href="http://localhost:3000/deployment/creating-a-repository/">Creating a repository</a></li>
+                  <li><a href="http://localhost:3000/deployment/adding-content-to-a-repository/">Adding content to your repository</a></li>
+                  <li><a href="http://localhost:3000/deployment/deploying-using-github-actions/">Deploying using GitHub actions</a></li>
+                  <li><a href="http://localhost:3000/deployment/using-a-custom-domain/">Using a custom domain</a></li>
+                      </ul>
+                  </details>
+              </div>
+        
+            </div>
+            
+          </div>
+        
+        </div>
+        
+        <script>
+          const menuToggle = document.getElementById('menu-toggle');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const closeMenu = document.getElementById('close-menu');
+          const baseUrl = window.location.origin;
+          const currentUrl = window.location.href;
+          const menuSelect = document.getElementById('menu-select');
+        
+          let scrollY = 0;
+        
+          function lockScroll() {
+            scrollY = window.scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
+          }
+        
+          function unlockScroll() {
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, scrollY);
+          }
+        
+          document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('#navigation .menu-items a');
+            let currentPath = window.location.pathname.toLowerCase();
+        
+            links.forEach(link => {
+              const href = link.getAttribute('href');
+              const linkText = link.textContent.trim().toLowerCase();
+        
+              if (currentPath == "/404.html" || !href.includes(baseUrl)) return;
+              if (currentPath.includes(linkText)) {
+                link.classList.add('active');
+              } else if (linkText == "docs" && !currentPath.includes("license")) {
+                link.classList.add('active');
+              }
+              
+            });
+          });
+        
+          if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+              mobileMenu.classList.add('menu-open');
+              lockScroll();
+            });
+          }
+          if (closeMenu) {
+            closeMenu.addEventListener('click', () => {
+              mobileMenu.classList.remove('menu-open');
+              unlockScroll();
+            });
+          }
+          if (menuSelect) {
+            for (const option of menuSelect.options) {
+              if (currentUrl == option.value) {
+                menuSelect.value = option.value;
+                break;
+              }
+            }
+        
+            menuSelect.addEventListener('change', (e) => {
+              const url = e.target.value;
+              if (!url) return;
+              if (url.includes(baseUrl)) {
+                window.location.href = url;
+              } else {
+                window.open(url, '_blank');
+                menuSelect.value = currentUrl;
+              }
+            });
+          }
+        
+          document.addEventListener('click', (event) => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuToggle = document.getElementById('menu-toggle');
+            if (mobileMenu && menuToggle) {
+                if (mobileMenu.classList.contains('menu-open')) {
+                  if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mobileMenu.classList.remove('menu-open');
+                    unlockScroll();
+                  }
+                }
+            }
+          });
+        
+          document.addEventListener('touchmove', (e) => {
+            if (mobileMenu.classList.contains('menu-open') && !mobileMenu.contains(e.target)) {
+              e.preventDefault();
+            }
+          }, { passive: false });
+        
+        </script>        <main id="page-container" class="wrapper">
+        <div id="docs">
+            <div class="left">
+                <aside>
+                
+                    
+                <style>
+                .left aside a.active {
+                    font-weight: bold;
+                }
+                
+                #docs .left li a {
+                    padding: 4px 0 4px 1rem;
+                    border-left: 1px solid #efefef;
+                }
+                #docs .left li a.active {
+                    border-left: 2px solid var(--link-color-active);
+                    padding-left: 1.25rem;
+                }
+                #docs .left ul li a.active {
+                    color: var(--link-color-active);
+                }
+                .left aside details {
+                    margin-bottom: 0.25rem;
+                }
+                .left aside summary {
+                    margin-bottom: 10px;
+                }
+                .left aside details > summary {
+                    list-style: none;
+                }
+                
+                </style>
+                
+                <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", function () {
+                    let currentUrl = window.location.href;
+                    //console.log(currentUrl);
+                    document.querySelectorAll("aside a").forEach(link => {
+                        if (link.getAttribute("href") === currentUrl) {
+                            link.classList.add("active");
+                            let details = link.closest("details");
+                            if (details) {
+                                details.open = true;
+                            }
+                        }
+                    });
+                });
+                </script>
+                
+                    <button id="open-modal-btn">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--link-color)" class="size-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                              </svg>
+                    Search...</button>
+                    
+                
+                    <details class="http://localhost:3000/getting-started/" open>
+                        <summary style="font-size: 1rem;"><a href="http://localhost:3000/getting-started/">Getting started</a></summary>
+                        <ul>
+                            <li><a href="http://localhost:3000/getting-started/01-prerequisites/">Prerequisites</a></li>
+            <li><a href="http://localhost:3000/getting-started/02-overview/">Overview</a></li>
+            <li><a href="http://localhost:3000/getting-started/03-how-to-use/">How to use</a></li>
+            <li><a href="http://localhost:3000/getting-started/04-help-and-contribution/">Help and contribution</a></li>
+                        </ul>
+                    </details>
+
+                    <details class="http://localhost:3000/markdown-basics/" open>
+                        <summary style="font-size: 1rem;"><a href="http://localhost:3000/markdown-basics/">Markdown basics</a></summary>
+                        <ul>
+                            <li><a href="http://localhost:3000/markdown-basics/text-formatting-and-lists/">Text formatting and lists</a></li>
+            <li><a href="http://localhost:3000/markdown-basics/links-images-and-tables/">Links, images and tables</a></li>
+                        </ul>
+                    </details>
+
+                    <details class="http://localhost:3000/template-basics/" open>
+                        <summary style="font-size: 1rem;"><a href="http://localhost:3000/template-basics/">Template basics</a></summary>
+                        <ul>
+                            <li><a href="http://localhost:3000/template-basics/changing-the-site-title/">Changing the site title</a></li>
+            <li><a href="http://localhost:3000/template-basics/changing-the-site-logo/">Changing the site logo</a></li>
+            <li><a href="http://localhost:3000/template-basics/changing-the-hero-cards/">Changing the hero cards</a></li>
+            <li><a href="http://localhost:3000/template-basics/creating-a-new-category/">Creating a new category</a></li>
+            <li><a href="http://localhost:3000/template-basics/creating-a-new-guide/">Creating a new guide</a></li>
+            <li><a href="http://localhost:3000/template-basics/creating-a-custom-page/">Creating a custom page</a></li>
+            <li><a href="http://localhost:3000/template-basics/customizing-the-footer/">Customizing the footer</a></li>
+                        </ul>
+                    </details>
+
+                    <details class="http://localhost:3000/deployment/" open>
+                        <summary style="font-size: 1rem;"><a href="http://localhost:3000/deployment/">Deployment</a></summary>
+                        <ul>
+                            <li><a href="http://localhost:3000/deployment/creating-a-repository/">Creating a repository</a></li>
+            <li><a href="http://localhost:3000/deployment/adding-content-to-a-repository/">Adding content to your repository</a></li>
+            <li><a href="http://localhost:3000/deployment/deploying-using-github-actions/">Deploying using GitHub actions</a></li>
+            <li><a href="http://localhost:3000/deployment/using-a-custom-domain/">Using a custom domain</a></li>
+                        </ul>
+                    </details>
+                </aside>
+            </div>
+            <div class="center">
+                <article>
+        
+                        <div class="guide-category-link">
+                            <a href="http://localhost:3000/deployment/">Deployment</a>
+                            <span class="breadcrumbs-arrow" style="--icon: url('http://localhost:3000/images/mobile_arrow.svg');"></span>
+                            <div class="active">Adding content to your repository</div>
+                        </div>
+                    
+                    <h1>Adding Content to Your Repository</h1><p>Once your repository is set up, commit the necessary files.</p><p>Clone the repository to your local machine:</p><div class="code-block">
+  <button
+    class="copy-btn"
+    type="button"
+    aria-label="Copy code"
+    title="Copy"
+    onclick="copyCode(this)"
+  >
+    <svg class="icon icon-clipboard" fill="none" height="20" viewBox="0 0 21 20" width="21">
+      <path d="m4.66699 12.4998h-.83333c-.44203 0-.86595-.1756-1.17851-.4881-.31256-.3126-.48816-.7365-.48816-1.1785v-7.50003c0-.44203.1756-.86595.48816-1.17851s.73648-.48816 1.17851-.48816h7.50004c.442 0 .8659.1756 1.1785.48816.3125.31256.4881.73648.4881 1.17851v.83333m-3.33331 3.33334h7.50001c.9205 0 1.6667.74619 1.6667 1.66666v7.5c0 .9205-.7462 1.6667-1.6667 1.6667h-7.50001c-.92047 0-1.66666-.7462-1.66666-1.6667v-7.5c0-.92047.74619-1.66666 1.66666-1.66666z" stroke="#e3e3e3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </svg>
+    <svg
+      class="icon icon-check"
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      aria-hidden="true"
+    >
+      <path
+        d="M20.285 6.708a1 1 0 0 1 .007 1.414l-9.192
+           9.284a1 1 0 0 1-1.42.01L3.7 11.7a1 1 0 1 1
+           1.414-1.414l5.05 5.05 8.485-8.556a1 1 0 0 1
+           1.636-.072z"
+      />
+    </svg>
+  </button>
+  <pre><code class="language-bash">git clone https://github.com/owner/repository-name.git
+</code></pre>
+</div><p>Copy your website’s source files into the repository, or use the repository to create a new site directly.</p><p>Add, commit and push the source files to the repository, use the main branch:</p><div class="code-block">
+  <button
+    class="copy-btn"
+    type="button"
+    aria-label="Copy code"
+    title="Copy"
+    onclick="copyCode(this)"
+  >
+    <svg class="icon icon-clipboard" fill="none" height="20" viewBox="0 0 21 20" width="21">
+      <path d="m4.66699 12.4998h-.83333c-.44203 0-.86595-.1756-1.17851-.4881-.31256-.3126-.48816-.7365-.48816-1.1785v-7.50003c0-.44203.1756-.86595.48816-1.17851s.73648-.48816 1.17851-.48816h7.50004c.442 0 .8659.1756 1.1785.48816.3125.31256.4881.73648.4881 1.17851v.83333m-3.33331 3.33334h7.50001c.9205 0 1.6667.74619 1.6667 1.66666v7.5c0 .9205-.7462 1.6667-1.6667 1.6667h-7.50001c-.92047 0-1.66666-.7462-1.66666-1.6667v-7.5c0-.92047.74619-1.66666 1.66666-1.66666z" stroke="#e3e3e3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </svg>
+    <svg
+      class="icon icon-check"
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      aria-hidden="true"
+    >
+      <path
+        d="M20.285 6.708a1 1 0 0 1 .007 1.414l-9.192
+           9.284a1 1 0 0 1-1.42.01L3.7 11.7a1 1 0 1 1
+           1.414-1.414l5.05 5.05 8.485-8.556a1 1 0 0 1
+           1.636-.072z"
+      />
+    </svg>
+  </button>
+  <pre><code class="language-bash">git add .
+git commit -m "Add site source"
+git push origin main
+</code></pre>
+</div><p>After you’ve pushed the content files and folders should appear on the GitHub repository. Now you are ready to deploy your website using GitHub Actions.</p>
+        
+                    <div class="extra-space"></div>
+                    
+                    <section>
+                        <div class="grid grid-2">
+        
+                            <a href="http://localhost:3000/deployment/creating-a-repository/" class="nav-link">
+                            <div class="prev">
+                                <svg fill="none" class="nav-arrow nav-arrow--left" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m7.825 13 5.6 5.6-1.425 1.4-8-8 8-8 1.425 1.4-5.6 5.6h12.175v2z" fill="#005D59"/>
+                                </svg>
+                                <div class="nav-text">
+                                    <div class="nav-category-title">Previous - Deployment</div>
+                                    <div class="nav-title">Creating a repository</div>
+                                </div>
+                            </div>
+                            </a>
+        
+        
+                            <a href="http://localhost:3000/deployment/deploying-using-github-actions/" class="nav-link">
+                            <div class="next">
+                                <div class="nav-text">
+                                    <div class="nav-category-title">Next - Deployment</div>
+                                    <div class="nav-title">Deploying using GitHub actions</div>
+                                </div>
+                                <svg class="nav-arrow nav-arrow--right" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m16.175 13h-12.175v-2h12.175l-5.6-5.6 1.425-1.4 8 8-8 8-1.425-1.4z" fill="#005D59"/>
+                                </svg>
+                            </div>
+                            </a>
+        
+                        </div>
+                    </section>
+        
+                </article>
+            </div>
+            <div class="right">
+                <aside>
+                    <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                    //console.log("TOC Highlight Script Loaded");
+                
+                    const sections = document.querySelectorAll("article [id]");
+                    //console.log("Detected Sections:", [...sections].map(el => el.id));
+                
+                    const tocLinks = document.querySelectorAll(".right aside ul a");
+                    //console.log("Detected TOC Links:", tocLinks);
+                
+                    let lastActiveId = null;
+                    let isManualScroll = false; // Figyeljük, hogy kattintás vagy görgetés történt-e
+                
+                    // IntersectionObserver beállítás a görgetés követésére
+                    let observer = new IntersectionObserver(entries => {
+                        if (isManualScroll) return; // Ha éppen anchorra kattintottunk, ne zavarjuk meg
+                
+                        let visibleSections = [];
+                
+                        entries.forEach(entry => {
+                            //console.log(`Checking section: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}, top: ${entry.boundingClientRect.top}`);
+                
+                            if (entry.isIntersecting) {
+                                visibleSections.push({
+                                    id: entry.target.id,
+                                    top: entry.boundingClientRect.top
+                                });
+                            }
+                        });
+                
+                        if (visibleSections.length > 0) {
+                            // Mindig a viewport tetejéhez legközelebbi szakaszt válasszuk aktívnak
+                            visibleSections.sort((a, b) => a.top - b.top);
+                            let activeId = visibleSections[0].id;
+                
+                            if (activeId === lastActiveId) return; // Ha nem változott az aktív elem, ne frissítsünk
+                
+                            lastActiveId = activeId;
+                
+                            //console.log("New Active ID:", activeId);
+                
+                            // TOC frissítése
+                            tocLinks.forEach(link => link.classList.remove("active"));
+                
+                            tocLinks.forEach(link => {
+                                let linkHash = new URL(link.href).hash;
+                                let linkTargetId = linkHash ? linkHash.substring(1) : null;
+                
+                                if (linkTargetId === activeId) {
+                                    //console.log(`Setting active: ${linkHash}`);
+                                    link.classList.add("active");
+                                }
+                            });
+                        }
+                    }, {
+                        rootMargin: "-150px 0px -60% 0px", // 🔥 Figyelési magasság feljebb tolva a kattintás miatt
+                        threshold: [0.6] // Legalább 60%-ban láthatónak kell lennie a váltáshoz
+                    });
+                
+                    sections.forEach(section => observer.observe(section));
+                
+                    // Anchor link kattintásra finomított görgetés
+                    tocLinks.forEach(link => {
+                        link.addEventListener("click", (event) => {
+                            event.preventDefault(); // Ne hagyjuk, hogy a böngésző azonnal ugráljon
+                
+                            const targetId = new URL(link.href).hash.substring(1);
+                            const targetElement = document.getElementById(targetId);
+                
+                            if (targetElement) {
+                                isManualScroll = true; // Kijelöljük, hogy kézi görgetés történt
+                
+                                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                
+                                // Időzítés a görgetés után, hogy az aktív elem megfelelően frissüljön
+                                setTimeout(() => {
+                                    isManualScroll = false; // Visszaállítjuk a görgetés követését
+                                    lastActiveId = targetId;
+                                    //console.log(`Manually setting active: #${targetId}`);
+                
+                                    tocLinks.forEach(link => link.classList.remove("active"));
+                                    tocLinks.forEach(link => {
+                                        if (new URL(link.href).hash.substring(1) === targetId) {
+                                            link.classList.add("active");
+                                        }
+                                    });
+                                }, 600); // Elég időt hagyunk a scroll befejeződésére
+                            }
+                        });
+                    });
+                });
+                    </script>
+                </aside>
+            </div>
+        </div>
+        </main>
+        <footer id="site-footer" >
+        
+        <div class="wrapper">
+        
+            <div class="footer-top">
+        
+                <div id="footer-top-div1">
+                    <a href="http://localhost:3000/" class="logo">
+                        <img
+                            src="http://localhost:3000/images/logos/logo.png"
+                            alt="T-Doc footer icon"
+                            title="T-Doc"
+                        />
+                        <span>T-Doc</span>
+                    </a>
+                
+                </div>
+        
+                <div class="footer-top-div2">
+                        <a aria-label="Facebook" href="https://facebook.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256"><g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM37,19h-2c-2.14,0 -3,0.5 -3,2v3h5l-1,5h-4v15h-5v-15h-4v-5h4v-3c0,-4 2,-7 6,-7c2.9,0 4,1 4,1z"></path></g></g></svg>
+                        </a>
+                <a aria-label="Bluesky" href="https://bsky.app/" target="_blank">
+                                    <span class="footer-local-icon" style="--icon: url('http://localhost:3000/images/bluesky_icon.svg');"></span>
+                        </a>
+                <a aria-label="Mastadon" href="https://mastodon.social/explore/" target="_blank">
+                                    <span class="footer-local-icon" style="--icon: url('http://localhost:3000/images/mastodon_icon.svg');"></span>
+                        </a>
+                <a aria-label="X" href="https://x.com/" target="_blank">
+                                    <span class="footer-local-icon" style="--icon: url('http://localhost:3000/images/x_icon.svg');"></span>
+                        </a>
+                </div>
+        
+            </div>
+        
+            <div class="footer-mid">
+                <p>
+                    A flexible and powerful template for Toucan, designed for clear and easy-to-maintain documentation of any product, service, or project.       
+                </p>
+            </div>
+        
+            <div class="footer-bottom">
+                <div id="footer-bottom-div1">
+                    <small>T-Doc &copy; 2025</small>
+                </div>
+                <div id="footer-bottom-div2">
+                    <small>This site was generated using <a href="https://swift.org/" target="_blank">Swift</a> & <a href="https://github.com/binarybirds/toucan" target="_blank">Toucan</a>.</small>
+                </div>
+            </div>
+        
+        </div>
+            
+        </footer>    </div>
+
+    
+    <script>window.__BASE_URL__ = "http://localhost:3000";</script>
+    <script src="http://localhost:3000/javascript/search.js"></script>
+    <script src="http://localhost:3000/javascript/modal.js" defer></script>
+    <script src="http://localhost:3000/javascript/code-with-copy.js"></script>
+
+    </body>
+</html>

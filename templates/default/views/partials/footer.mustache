@@ -1,0 +1,59 @@
+<footer id="site-footer" >
+
+<div class="wrapper">
+
+    <div class="footer-top">
+
+        <div id="footer-top-div1">
+            <a href="{{baseUrl}}/" class="logo">
+                <img
+                    src="{{baseUrl}}/images/logos/logo.png"
+                    alt="{{site.name}} footer icon"
+                    title="{{site.name}}"
+                />
+                <span>{{site.name}}</span>
+            </a>
+        
+        </div>
+
+        <div class="footer-top-div2">
+            {{#site.footer-socials}}
+                <a aria-label="{{title}}" href="{{url}}" target="_blank">
+                    {{#icon}}
+                        {{{icon}}}
+                    {{/icon}}
+                    {{^icon}}
+                        {{#iconLocal}}
+                            <span class="footer-local-icon" style="--icon: url('{{baseUrl}}{{.}}');"></span>
+                        {{/iconLocal}}
+                        {{^iconLocal}}
+                            {{title}}
+                        {{/iconLocal}}
+                    {{/icon}}
+                </a>
+            {{/site.footer-socials}}
+            {{^site.footer-socials}}
+                <small>No social links</small>
+            {{/site.footer-socials}}
+        </div>
+
+    </div>
+
+    <div class="footer-mid">
+        <p>
+            A flexible and powerful template for Toucan, designed for clear and easy-to-maintain documentation of any product, service, or project.       
+        </p>
+    </div>
+
+    <div class="footer-bottom">
+        <div id="footer-bottom-div1">
+            <small>{{site.name}} &copy; {{generation.formats.year}}</small>
+        </div>
+        <div id="footer-bottom-div2">
+            <small>This site was generated using <a href="https://swift.org/" target="_blank">Swift</a> & <a href="https://github.com/binarybirds/toucan" target="_blank">Toucan</a>.</small>
+        </div>
+    </div>
+
+</div>
+    
+</footer>

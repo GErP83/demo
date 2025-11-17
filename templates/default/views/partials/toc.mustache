@@ -1,0 +1,106 @@
+<aside>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    //console.log("TOC Highlight Script Loaded");
+
+    const sections = document.querySelectorAll("article [id]");
+    //console.log("Detected Sections:", [...sections].map(el => el.id));
+
+    const tocLinks = document.querySelectorAll(".right aside ul a");
+    //console.log("Detected TOC Links:", tocLinks);
+
+    let lastActiveId = null;
+    let isManualScroll = false; // Figyeljük, hogy kattintás vagy görgetés történt-e
+
+    // IntersectionObserver beállítás a görgetés követésére
+    let observer = new IntersectionObserver(entries => {
+        if (isManualScroll) return; // Ha éppen anchorra kattintottunk, ne zavarjuk meg
+
+        let visibleSections = [];
+
+        entries.forEach(entry => {
+            //console.log(`Checking section: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}, top: ${entry.boundingClientRect.top}`);
+
+            if (entry.isIntersecting) {
+                visibleSections.push({
+                    id: entry.target.id,
+                    top: entry.boundingClientRect.top
+                });
+            }
+        });
+
+        if (visibleSections.length > 0) {
+            // Mindig a viewport tetejéhez legközelebbi szakaszt válasszuk aktívnak
+            visibleSections.sort((a, b) => a.top - b.top);
+            let activeId = visibleSections[0].id;
+
+            if (activeId === lastActiveId) return; // Ha nem változott az aktív elem, ne frissítsünk
+
+            lastActiveId = activeId;
+
+            //console.log("New Active ID:", activeId);
+
+            // TOC frissítése
+            tocLinks.forEach(link => link.classList.remove("active"));
+
+            tocLinks.forEach(link => {
+                let linkHash = new URL(link.href).hash;
+                let linkTargetId = linkHash ? linkHash.substring(1) : null;
+
+                if (linkTargetId === activeId) {
+                    //console.log(`Setting active: ${linkHash}`);
+                    link.classList.add("active");
+                }
+            });
+        }
+    }, {
+        rootMargin: "-150px 0px -60% 0px", // 🔥 Figyelési magasság feljebb tolva a kattintás miatt
+        threshold: [0.6] // Legalább 60%-ban láthatónak kell lennie a váltáshoz
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Anchor link kattintásra finomított görgetés
+    tocLinks.forEach(link => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault(); // Ne hagyjuk, hogy a böngésző azonnal ugráljon
+
+            const targetId = new URL(link.href).hash.substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                isManualScroll = true; // Kijelöljük, hogy kézi görgetés történt
+
+                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                // Időzítés a görgetés után, hogy az aktív elem megfelelően frissüljön
+                setTimeout(() => {
+                    isManualScroll = false; // Visszaállítjuk a görgetés követését
+                    lastActiveId = targetId;
+                    //console.log(`Manually setting active: #${targetId}`);
+
+                    tocLinks.forEach(link => link.classList.remove("active"));
+                    tocLinks.forEach(link => {
+                        if (new URL(link.href).hash.substring(1) === targetId) {
+                            link.classList.add("active");
+                        }
+                    });
+                }, 600); // Elég időt hagyunk a scroll befejeződésére
+            }
+        });
+    });
+});
+    </script>
+    {{#empty(page.contents.outline)}}
+    {{/empty(page.contents.outline)}}
+    {{^empty(page.contents.outline)}}
+    <strong>On this page</strong>
+    <ul>
+    {{#page.contents.outline}}
+        <li class="level-{{level}}">
+            <a href="#{{fragment}}">{{text}}</a>
+        </li>
+    {{/page.contents.outline}}
+    </ul>
+    {{/empty(page.contents.outline)}}
+</aside>
